@@ -20,10 +20,8 @@ class DefaultController extends Controller
     {
         $model = new DataString();
 
-
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-//            return $this->redirect(['view', 'id' => $model->code]);
-        }
+        $model->load(Yii::$app->request->post());
+        $model->validate();
 
         return $this->render('index', [
             'model' => $model,
