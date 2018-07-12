@@ -53,6 +53,11 @@ $config = [
         */
     ],
     'params' => $params,
+    'modules' => [
+        'Brackets' => [
+            'class' => 'app\modules\brackets\Brackets',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
